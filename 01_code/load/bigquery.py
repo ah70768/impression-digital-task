@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 from google.cloud import bigquery
 from google.oauth2 import service_account
-from fetch_shopify_data import ShopifyAPI
+# from  .01_extract.fetch_shopify_data import ShopifyAPI
 
 class BigQueryManager:
 
@@ -42,32 +42,32 @@ class BigQueryManager:
         print('Data loaded into table {t_id} in dataset {d_id}'.format(t_id=table_id,d_id=dataset_id))
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     
-    dotenv_path = os.path.join(os.path.dirname(__file__), "..", "..", "03_config", ".env")
-    load_dotenv(dotenv_path)
+#     dotenv_path = os.path.join(os.path.dirname(__file__), "..", "..", "03_config", ".env")
+#     load_dotenv(dotenv_path)
 
-    shop = os.getenv('SHOP_URL')
-    api_key = os.getenv('SHOPIFY_ADMIN_API_ACCESS_TOKEN')
-    api_version = os.getenv('SHOPIFY_API_VERSION')
+#     shop = os.getenv('SHOP_URL')
+#     api_key = os.getenv('SHOPIFY_ADMIN_API_ACCESS_TOKEN')
+#     api_version = os.getenv('SHOPIFY_API_VERSION')
 
-    client = ShopifyAPI(shop, api_key, api_version)
-    client.create_session()
+#     client = ShopifyAPI(shop, api_key, api_version)
+#     client.create_session()
         
-    table_names = ['Order', 'Product', 'Customer']
-    tables_df = client.fetch_tables(table_names)
+#     table_names = ['Order', 'Product', 'Customer']
+#     tables_df = client.fetch_tables(table_names)
 
-    project_id = os.getenv('GCP_PROJECT_ID')
-    gcp_creds_path = os.path.join(os.path.dirname(__file__), '..', '..', '03_config', 'impression-digital-22a0eecacc9a.json')
+#     project_id = os.getenv('GCP_PROJECT_ID')
+#     gcp_creds_path = os.path.join(os.path.dirname(__file__), '..', '..', '03_config', 'impression-digital-22a0eecacc9a.json')
 
-    # print(project_id)
-    bq = BigQueryManager(project_id, gcp_creds_path)
+#     # print(project_id)
+#     bq = BigQueryManager(project_id, gcp_creds_path)
 
-    # create datasets for each stage of data processing
-    datasets = ['raw', 'staging', 'processed']
-    for ds in datasets:
-        bq.create_dataset(ds)
+#     # create datasets for each stage of data processing
+#     datasets = ['raw', 'staging', 'processed']
+#     for ds in datasets:
+#         bq.create_dataset(ds)
 
-    for key in tables_df.keys():
-        bq.load_table(tables_df[key], 'raw', key)
+#     for key in tables_df.keys():
+#         bq.load_table(tables_df[key], 'raw', key)
     
