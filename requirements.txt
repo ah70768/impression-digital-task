@@ -2,3 +2,5 @@ requests
 pandas
 python-dotenv
 ShopifyAPI
+google-cloud-bigquery
+pyarrow
