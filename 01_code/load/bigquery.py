@@ -40,7 +40,7 @@ class BigQueryManager:
         table_ref = self.client.dataset(dataset_id).table(table_id)
 
         job_config = bigquery.LoadJobConfig(write_disposition="WRITE_TRUNCATE", source_format=bigquery.SourceFormat.PARQUET)
-        job = self.client.load_table_from_dataframe(dataframe, table_ref, job_config=job_config)
+        job = self.client.load_table_from_dataframe(dataframe.astype(str), table_ref, job_config=job_config)
         job.result()
         print('Data loaded into table {t_id} in dataset {d_id}'.format(t_id=table_id,d_id=dataset_id))
 
