@@ -4,3 +4,4 @@ python-dotenv
 ShopifyAPI
 google-cloud-bigquery
 pyarrow
+dbt-bigquery

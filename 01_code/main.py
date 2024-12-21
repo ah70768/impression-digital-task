@@ -6,7 +6,7 @@ from .load.bigquery import BigQueryManager
 
 def main():
     
-    dotenv_path = os.path.join(os.path.dirname(__file__), "..", "03_config", ".env")
+    dotenv_path = os.path.join(os.path.dirname(__file__), "config", ".env")
     load_dotenv(dotenv_path)
 
     shop = os.getenv('SHOP_URL')
@@ -20,7 +20,7 @@ def main():
     tables_df = client.fetch_tables(table_names)
 
     project_id = os.getenv('GCP_PROJECT_ID')
-    gcp_creds_path = os.path.join(os.path.dirname(__file__), '..', '03_config', 'impression-digital-22a0eecacc9a.json')
+    gcp_creds_path = os.path.join(os.path.dirname(__file__), 'config', 'impression-digital-22a0eecacc9a.json')
 
     # print(project_id)
     bq = BigQueryManager(project_id, gcp_creds_path)

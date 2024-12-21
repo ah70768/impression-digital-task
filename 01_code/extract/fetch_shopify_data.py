@@ -63,7 +63,7 @@ class ShopifyAPI:
     def driver():
         """Driver method to execute the above methods in order"""
 
-        dotenv_path = os.path.join(os.path.dirname(__file__), "..", "..", "03_config", ".env")
+        dotenv_path = os.path.join(os.path.dirname(__file__), "..", "config", ".env")
         load_dotenv(dotenv_path)
 
         shop = os.getenv('SHOP_URL')
@@ -81,9 +81,9 @@ class ShopifyAPI:
 
 
 if __name__ == "__main__":
-
-    ShopifyAPI.driver()
-
+     
+    # ShopifyAPI.driver()
+    pass
 
 
 
