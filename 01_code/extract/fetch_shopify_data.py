@@ -32,11 +32,11 @@ class ShopifyAPI:
 
         # handle pagination for larger datasets as limit for Shopify API is 250
         for d in data:
-            all_rows.append(d.attributes) # attributes retrieves a dict which represents a row of the table
+            all_rows.append(d.to_dict()) 
         while data.has_next_page():
             data = data.next_page()
             for d in data:
-                all_rows.append(d.attributes)
+                all_rows.append(d.to_dict())
 
         return all_rows
     
