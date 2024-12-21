@@ -1,0 +1,149 @@
+[0m00:21:43.040637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD8A534EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD8E65C560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD8E80AD20>]}
+
+
+============================== 00:21:43.054081 | 75a20a22-dfa9-47c5-b3f9-da4023eee925 ==============================
+[0m00:21:43.054081 [info ] [MainThread]: Running with dbt=1.9.1
+[0m00:21:43.057234 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\amarh\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init shopify', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:21:43.125705 [debug] [MainThread]: Starter project path: C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\venv\Lib\site-packages\dbt\include\starter_project
+[0m00:21:43.238507 [info ] [MainThread]: 
+Your new dbt project "shopify" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:21:43.242552 [info ] [MainThread]: Setting up your profile.
+[0m00:26:19.779838 [info ] [MainThread]: Profile shopify written to C:\Users\amarh\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m00:26:19.789456 [debug] [MainThread]: Command `dbt init` succeeded at 00:26:19.789456 after 277.19 seconds
+[0m00:26:19.791279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD97870680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD976F7BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD989C2FC0>]}
+[0m00:26:19.796900 [debug] [MainThread]: Flushing usage events
+[0m00:26:20.234349 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:31:50.140216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F31A4AE240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F317982870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F31AD4BFE0>]}
+
+
+============================== 00:31:50.149219 | 22bc9e0f-ac42-4edf-88e7-e5c3cf992e9a ==============================
+[0m00:31:50.149219 [info ] [MainThread]: Running with dbt=1.9.1
+[0m00:31:50.151791 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\amarh\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:31:50.203239 [info ] [MainThread]: dbt version: 1.9.1
+[0m00:31:50.204992 [info ] [MainThread]: python version: 3.12.4
+[0m00:31:50.206850 [info ] [MainThread]: python path: C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\venv\Scripts\python.exe
+[0m00:31:50.211022 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m00:31:53.052040 [info ] [MainThread]: Using profiles dir at C:\Users\amarh\.dbt
+[0m00:31:53.054650 [info ] [MainThread]: Using profiles.yml file at C:\Users\amarh\.dbt\profiles.yml
+[0m00:31:53.056334 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\dbt_project.yml
+[0m00:31:53.059101 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m00:31:53.063469 [debug] [MainThread]: Command `dbt debug` failed at 00:31:53.062466 after 3.34 seconds
+[0m00:31:53.064408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F317982870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F322BCD520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F323E0D370>]}
+[0m00:31:53.066369 [debug] [MainThread]: Flushing usage events
+[0m00:31:53.474956 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:35:32.731069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E08842FDA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E084EAD760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E087E873E0>]}
+
+
+============================== 00:35:32.737131 | 61cc70b2-4dff-4380-bb19-265e5d18af57 ==============================
+[0m00:35:32.737131 [info ] [MainThread]: Running with dbt=1.9.1
+[0m00:35:32.741154 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\amarh\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m00:35:32.783820 [info ] [MainThread]: dbt version: 1.9.1
+[0m00:35:32.786326 [info ] [MainThread]: python version: 3.12.4
+[0m00:35:32.787387 [info ] [MainThread]: python path: C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\venv\Scripts\python.exe
+[0m00:35:32.790024 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m00:35:35.493081 [info ] [MainThread]: Using profiles dir at C:\Users\amarh\.dbt
+[0m00:35:35.496641 [info ] [MainThread]: Using profiles.yml file at C:\Users\amarh\.dbt\profiles.yml
+[0m00:35:35.498372 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\dbt_project.yml
+[0m00:35:35.500378 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m00:35:35.503831 [debug] [MainThread]: Command `dbt debug` failed at 00:35:35.503831 after 3.16 seconds
+[0m00:35:35.506378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E08842FDA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E090DE4470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E0886930E0>]}
+[0m00:35:35.507744 [debug] [MainThread]: Flushing usage events
+[0m00:35:35.946341 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:35:58.415419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241FC01D760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241FF2C2DE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241FF17DAF0>]}
+
+
+============================== 00:35:58.423166 | dbdd332d-9570-4d6d-830b-c4850adac00d ==============================
+[0m00:35:58.423166 [info ] [MainThread]: Running with dbt=1.9.1
+[0m00:35:58.426123 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\amarh\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:35:58.472542 [info ] [MainThread]: dbt version: 1.9.1
+[0m00:35:58.475140 [info ] [MainThread]: python version: 3.12.4
+[0m00:35:58.477525 [info ] [MainThread]: python path: C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\venv\Scripts\python.exe
+[0m00:35:58.479524 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m00:36:01.074712 [info ] [MainThread]: Using profiles dir at C:\Users\amarh\.dbt
+[0m00:36:01.077117 [info ] [MainThread]: Using profiles.yml file at C:\Users\amarh\.dbt\profiles.yml
+[0m00:36:01.079122 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\dbt_project.yml
+[0m00:36:01.081119 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m00:36:01.085720 [debug] [MainThread]: Command `dbt debug` failed at 00:36:01.085622 after 2.93 seconds
+[0m00:36:01.086719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241FF1DF0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024187F3D940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241875F7230>]}
+[0m00:36:01.088582 [debug] [MainThread]: Flushing usage events
+[0m00:36:01.496227 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:36:30.645311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021219BB8D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002121C3CC320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002121C3CC110>]}
+
+
+============================== 00:36:30.651465 | ab4d26db-9968-49e9-bd98-e801c27cd47f ==============================
+[0m00:36:30.651465 [info ] [MainThread]: Running with dbt=1.9.1
+[0m00:36:30.654814 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\amarh\\.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m00:36:30.695392 [info ] [MainThread]: dbt version: 1.9.1
+[0m00:36:30.698970 [info ] [MainThread]: python version: 3.12.4
+[0m00:36:30.700970 [info ] [MainThread]: python path: C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\venv\Scripts\python.exe
+[0m00:36:30.703011 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m00:36:33.529879 [info ] [MainThread]: Using profiles dir at C:\Users\amarh\.dbt
+[0m00:36:33.534832 [info ] [MainThread]: Using profiles.yml file at C:\Users\amarh\.dbt\profiles.yml
+[0m00:36:33.536243 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\dbt_project.yml
+[0m00:36:33.538796 [info ] [MainThread]: adapter type: bigquery
+[0m00:36:33.540058 [info ] [MainThread]: adapter version: 1.9.0
+[0m00:36:33.542939 [info ] [MainThread]: Configuration:
+[0m00:36:33.545662 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:36:33.546472 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m00:36:33.548810 [info ] [MainThread]: Required dependencies:
+[0m00:36:33.550314 [debug] [MainThread]: Executing "git --help"
+[0m00:36:33.637580 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:36:33.639270 [debug] [MainThread]: STDERR: "b''"
+[0m00:36:33.640409 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:36:33.642066 [info ] [MainThread]: Connection:
+[0m00:36:33.644064 [info ] [MainThread]:   method: service-account
+[0m00:36:33.646842 [info ] [MainThread]:   database: impression-digital
+[0m00:36:33.648966 [info ] [MainThread]:   execution_project: impression-digital
+[0m00:36:33.653557 [info ] [MainThread]:   schema: raw
+[0m00:36:33.655562 [info ] [MainThread]:   location: EU
+[0m00:36:33.658633 [info ] [MainThread]:   priority: interactive
+[0m00:36:33.663649 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m00:36:33.668413 [info ] [MainThread]:   impersonate_service_account: None
+[0m00:36:33.675565 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m00:36:33.679197 [info ] [MainThread]:   job_retries: 1
+[0m00:36:33.680884 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m00:36:33.683887 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m00:36:33.690527 [info ] [MainThread]:   timeout_seconds: 300
+[0m00:36:33.693960 [info ] [MainThread]:   client_id: None
+[0m00:36:33.696002 [info ] [MainThread]:   token_uri: None
+[0m00:36:33.698182 [info ] [MainThread]:   dataproc_region: None
+[0m00:36:33.700169 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m00:36:33.702327 [info ] [MainThread]:   gcs_bucket: None
+[0m00:36:33.709589 [info ] [MainThread]:   dataproc_batch: None
+[0m00:36:33.712324 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m00:36:34.854893 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m00:36:34.855904 [debug] [MainThread]: On debug: select 1 as id
+[0m00:36:34.856466 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:36:38.558628 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=impression-digital&j=bq:EU:287b16a1-518f-43d0-bde8-2f6cc57f4a82&page=queryresults
+[0m00:36:43.570183 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:36:43.577686 [info ] [MainThread]: [31m1 check failed:[0m
+[0m00:36:43.582479 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\dbt_project.yml> not found
+
+[0m00:36:43.595636 [debug] [MainThread]: Command `dbt debug` failed at 00:36:43.594238 after 13.20 seconds
+[0m00:36:43.597976 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:36:43.599976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021219BB8D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002122575BAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002121C94F410>]}
+[0m00:36:43.603711 [debug] [MainThread]: Flushing usage events
+[0m00:36:43.990557 [debug] [MainThread]: An error was encountered while trying to flush usage events
