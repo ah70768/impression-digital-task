@@ -19,8 +19,9 @@ class ShopifyAPI:
         shop_info = shopify.Shop.current()
         
         if shop_info is None:
-            raise Exception("Session failed failed for {shop_name}".format(shop_name = self.merchant))
-        print('Session created succesfully for {shop_name}'.format(shop_name = self.merchant))
+            print("Failed to create session for {shop_name}".format(shop_name = self.merchant))
+        else:
+            print('Session created succesfully for {shop_name}'.format(shop_name = self.merchant))
     
 
     def fetch_data(self, object_name):
@@ -37,6 +38,8 @@ class ShopifyAPI:
             data = data.next_page()
             for d in data:
                 all_rows.append(d.to_dict())
+        
+        print("Data fetched for {attribute}".format(attribute = object_name))
 
         return all_rows
     
@@ -52,11 +55,11 @@ class ShopifyAPI:
         return all_df
 
     def save_data(self,tables_df,directory='02_data'):
-        """Saves the fetched data into CSV files in a given directory"""
+        """Saves the fetched data into CSV files in input directory"""
 
         for key in tables_df.keys():
             file_name = '{t}.csv'.format(t=key)
-            output_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '../../'+directory)),file_name)
+            output_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '../'+directory)),file_name)
             tables_df[key].to_csv(output_path, index=False)
     
     @staticmethod
@@ -82,7 +85,7 @@ class ShopifyAPI:
 
 if __name__ == "__main__":
      
-    # ShopifyAPI.driver()
+    ShopifyAPI.driver()
     pass
 
 
