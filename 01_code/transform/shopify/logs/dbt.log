@@ -961,3 +961,497 @@ FROM raw_cust
 [0m01:30:04.379495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C653A65A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C7175F710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C6834F680>]}
 [0m01:30:04.381720 [debug] [MainThread]: Flushing usage events
 [0m01:30:04.786945 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:46:19.583372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A811427F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A8113904D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A813D6D3A0>]}
+
+
+============================== 21:46:19.591718 | e5ee71fd-a847-463b-870a-3fd7e3c52fe9 ==============================
+[0m21:46:19.591718 [info ] [MainThread]: Running with dbt=1.9.1
+[0m21:46:19.593685 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\amarh\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\amarh\\Dropbox\\My_Stuff\\Progress File (Actual)\\Job Applications\\2024\\Data Engineer\\Impression Digital\\impression-digital-task\\01_code\\transform\\shopify\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:46:19.653425 [info ] [MainThread]: dbt version: 1.9.1
+[0m21:46:19.655416 [info ] [MainThread]: python version: 3.12.4
+[0m21:46:19.656484 [info ] [MainThread]: python path: C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\venv\Scripts\python.exe
+[0m21:46:19.659418 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m21:46:22.498884 [info ] [MainThread]: Using profiles dir at C:\Users\amarh\.dbt
+[0m21:46:22.499892 [info ] [MainThread]: Using profiles.yml file at C:\Users\amarh\.dbt\profiles.yml
+[0m21:46:22.501862 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\dbt_project.yml
+[0m21:46:22.503859 [info ] [MainThread]: adapter type: bigquery
+[0m21:46:22.505239 [info ] [MainThread]: adapter version: 1.9.0
+[0m21:46:22.744861 [info ] [MainThread]: Configuration:
+[0m21:46:22.746860 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:46:22.747927 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:46:22.749864 [info ] [MainThread]: Required dependencies:
+[0m21:46:22.751856 [debug] [MainThread]: Executing "git --help"
+[0m21:46:22.831857 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:46:22.832866 [debug] [MainThread]: STDERR: "b''"
+[0m21:46:22.833860 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:46:22.835859 [info ] [MainThread]: Connection:
+[0m21:46:22.837860 [info ] [MainThread]:   method: service-account
+[0m21:46:22.839862 [info ] [MainThread]:   database: impression-digital
+[0m21:46:22.841859 [info ] [MainThread]:   execution_project: impression-digital
+[0m21:46:22.844863 [info ] [MainThread]:   schema: staging
+[0m21:46:22.847015 [info ] [MainThread]:   location: EU
+[0m21:46:22.848857 [info ] [MainThread]:   priority: interactive
+[0m21:46:22.851860 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m21:46:22.855008 [info ] [MainThread]:   impersonate_service_account: None
+[0m21:46:22.858991 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m21:46:22.861976 [info ] [MainThread]:   job_retries: 1
+[0m21:46:22.863965 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m21:46:22.867857 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m21:46:22.869859 [info ] [MainThread]:   timeout_seconds: 300
+[0m21:46:22.872860 [info ] [MainThread]:   client_id: None
+[0m21:46:22.876862 [info ] [MainThread]:   token_uri: None
+[0m21:46:22.883903 [info ] [MainThread]:   dataproc_region: None
+[0m21:46:22.886861 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m21:46:22.889861 [info ] [MainThread]:   gcs_bucket: None
+[0m21:46:22.893318 [info ] [MainThread]:   dataproc_batch: None
+[0m21:46:22.896858 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:46:23.710562 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m21:46:23.710562 [debug] [MainThread]: On debug: select 1 as id
+[0m21:46:23.712563 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:46:24.286200 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=impression-digital&j=bq:EU:f3d4bf74-f97c-4622-86cf-1e0feb411f33&page=queryresults
+[0m21:46:24.806423 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:46:24.811470 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:46:24.825422 [debug] [MainThread]: Command `dbt debug` succeeded at 21:46:24.824424 after 5.48 seconds
+[0m21:46:24.829422 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:46:24.834428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A813D6CC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A81366A6F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A81E53A5A0>]}
+[0m21:46:24.841430 [debug] [MainThread]: Flushing usage events
+[0m21:46:25.274361 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:46:49.372206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002686D100170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002686D1011F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002686D1019D0>]}
+
+
+============================== 21:46:49.380205 | 67a0e8c9-77b4-4cc8-a618-34c028c880bd ==============================
+[0m21:46:49.380205 [info ] [MainThread]: Running with dbt=1.9.1
+[0m21:46:49.383207 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\amarh\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\amarh\\Dropbox\\My_Stuff\\Progress File (Actual)\\Job Applications\\2024\\Data Engineer\\Impression Digital\\impression-digital-task\\01_code\\transform\\shopify\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:46:52.407398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '67a0e8c9-77b4-4cc8-a618-34c028c880bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026876F57860>]}
+[0m21:46:52.507396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '67a0e8c9-77b4-4cc8-a618-34c028c880bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002686CC82180>]}
+[0m21:46:52.509498 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:46:53.322863 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m21:46:56.428963 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:46:56.429999 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:46:56.441971 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.shopify.raw
+[0m21:46:56.509563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '67a0e8c9-77b4-4cc8-a618-34c028c880bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000268774BC620>]}
+[0m21:46:56.627564 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\manifest.json
+[0m21:46:56.686564 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\semantic_manifest.json
+[0m21:46:56.761563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '67a0e8c9-77b4-4cc8-a618-34c028c880bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000268776AE7E0>]}
+[0m21:46:56.763566 [info ] [MainThread]: Found 1 model, 490 macros
+[0m21:46:56.766562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '67a0e8c9-77b4-4cc8-a618-34c028c880bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000268774E3470>]}
+[0m21:46:56.773109 [info ] [MainThread]: 
+[0m21:46:56.775108 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:46:56.777108 [info ] [MainThread]: 
+[0m21:46:56.780210 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:46:56.788106 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_impression-digital'
+[0m21:46:56.793110 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:46:57.274719 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_impression-digital_staging'
+[0m21:46:57.276727 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:46:57.576745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '67a0e8c9-77b4-4cc8-a618-34c028c880bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026876F3A3C0>]}
+[0m21:46:57.578160 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:46:57.586745 [debug] [Thread-1 (]: Began running node model.shopify.customer
+[0m21:46:57.588844 [info ] [Thread-1 (]: 1 of 1 START sql table model staging.customer .................................. [RUN]
+[0m21:46:57.592396 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.shopify.customer'
+[0m21:46:57.593982 [debug] [Thread-1 (]: Began compiling node model.shopify.customer
+[0m21:46:57.631749 [debug] [Thread-1 (]: Writing injected SQL for node "model.shopify.customer"
+[0m21:46:57.637748 [debug] [Thread-1 (]: Began executing node model.shopify.customer
+[0m21:46:57.695673 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:46:58.160579 [debug] [Thread-1 (]: Writing runtime sql for node "model.shopify.customer"
+[0m21:46:58.163580 [debug] [Thread-1 (]: On model.shopify.customer: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "shopify", "target_name": "dev", "node_id": "model.shopify.customer"} */
+
+  
+    
+
+    create or replace table `impression-digital`.`staging`.`customer`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+WITH raw_cust AS (
+
+SELECT
+  id
+  ,CONCAT(first_name, ' ', last_name) AS customer_name
+  ,email
+  ,phone
+FROM impression-digital.raw.Customer
+
+)
+
+SELECT *
+FROM raw_cust
+    );
+  
+[0m21:46:58.502879 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=impression-digital&j=bq:EU:2318a10f-9c32-47c8-af0b-c922296504fa&page=queryresults
+[0m21:47:01.148693 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '67a0e8c9-77b4-4cc8-a618-34c028c880bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026877F71B50>]}
+[0m21:47:01.155712 [info ] [Thread-1 (]: 1 of 1 OK created sql table model staging.customer ............................. [[32mCREATE TABLE (13.0 rows, 1.1 KiB processed)[0m in 3.55s]
+[0m21:47:01.168616 [debug] [Thread-1 (]: Finished running node model.shopify.customer
+[0m21:47:01.175449 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:47:01.181507 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:47:01.183506 [debug] [MainThread]: Connection 'list_impression-digital' was properly closed.
+[0m21:47:01.185436 [debug] [MainThread]: Connection 'list_impression-digital_staging' was properly closed.
+[0m21:47:01.187895 [debug] [MainThread]: Connection 'model.shopify.customer' was properly closed.
+[0m21:47:01.189998 [info ] [MainThread]: 
+[0m21:47:01.213819 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.41 seconds (4.41s).
+[0m21:47:01.225987 [debug] [MainThread]: Command end result
+[0m21:47:01.441012 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\manifest.json
+[0m21:47:01.447648 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\semantic_manifest.json
+[0m21:47:01.500092 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\run_results.json
+[0m21:47:01.501076 [info ] [MainThread]: 
+[0m21:47:01.508292 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:47:01.525057 [info ] [MainThread]: 
+[0m21:47:01.548403 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m21:47:01.562388 [debug] [MainThread]: Command `dbt run` succeeded at 21:47:01.561071 after 12.52 seconds
+[0m21:47:01.566249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002686A73B230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026866F04230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002686CA72000>]}
+[0m21:47:01.575311 [debug] [MainThread]: Flushing usage events
+[0m21:47:02.117141 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:47:49.401057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADFF5D2270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AD82041460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADFF4F4410>]}
+
+
+============================== 21:47:49.409672 | bc320819-2a7d-42a5-8734-c3b697476f16 ==============================
+[0m21:47:49.409672 [info ] [MainThread]: Running with dbt=1.9.1
+[0m21:47:49.411412 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\amarh\\Dropbox\\My_Stuff\\Progress File (Actual)\\Job Applications\\2024\\Data Engineer\\Impression Digital\\impression-digital-task\\01_code\\transform\\shopify\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\amarh\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:47:52.486226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bc320819-2a7d-42a5-8734-c3b697476f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AD8C58F230>]}
+[0m21:47:52.588228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bc320819-2a7d-42a5-8734-c3b697476f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AD8C61AF00>]}
+[0m21:47:52.590227 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:47:53.365763 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m21:47:53.645767 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:47:53.646769 [debug] [MainThread]: Partial parsing: updated file: shopify://models\staging\customer.sql
+[0m21:47:54.193454 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.shopify.raw
+[0m21:47:54.211133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bc320819-2a7d-42a5-8734-c3b697476f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AD8C8EC4D0>]}
+[0m21:47:54.388408 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\manifest.json
+[0m21:47:54.399340 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\semantic_manifest.json
+[0m21:47:54.475778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bc320819-2a7d-42a5-8734-c3b697476f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AD8CC0D0A0>]}
+[0m21:47:54.477775 [info ] [MainThread]: Found 1 model, 490 macros
+[0m21:47:54.479775 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bc320819-2a7d-42a5-8734-c3b697476f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AD8C6F5A60>]}
+[0m21:47:54.486779 [info ] [MainThread]: 
+[0m21:47:54.488778 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:47:54.490778 [info ] [MainThread]: 
+[0m21:47:54.493778 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:47:54.496775 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_impression-digital'
+[0m21:47:54.503780 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:47:54.993745 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_impression-digital_staging'
+[0m21:47:54.996888 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:47:55.433864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bc320819-2a7d-42a5-8734-c3b697476f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AD8C5FA930>]}
+[0m21:47:55.435827 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:47:55.463201 [debug] [Thread-1 (]: Began running node model.shopify.customer
+[0m21:47:55.464717 [info ] [Thread-1 (]: 1 of 1 START sql table model staging.customer .................................. [RUN]
+[0m21:47:55.467732 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.shopify.customer'
+[0m21:47:55.469735 [debug] [Thread-1 (]: Began compiling node model.shopify.customer
+[0m21:47:55.500749 [debug] [Thread-1 (]: Writing injected SQL for node "model.shopify.customer"
+[0m21:47:55.522832 [debug] [Thread-1 (]: Began executing node model.shopify.customer
+[0m21:47:55.585614 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:47:55.930583 [debug] [Thread-1 (]: Writing runtime sql for node "model.shopify.customer"
+[0m21:47:55.933581 [debug] [Thread-1 (]: On model.shopify.customer: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "shopify", "target_name": "dev", "node_id": "model.shopify.customer"} */
+
+  
+    
+
+    create or replace table `impression-digital`.`staging`.`customer`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+WITH raw_cust AS (
+
+SELECT
+  id
+  ,email
+  ,PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', created_at) AS created_at
+  ,PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', updated_at) AS updated_at
+  ,first_name
+  ,last_name
+  ,CAST(orders_count AS INT64) AS orders_count
+  ,state
+  ,CAST(total_spent AS FLOAT64) AS total_spent
+  ,CASE WHEN last_order_id = 'nan' THEN NULL ELSE CAST(last_order_id AS STRING) END AS last_order_id
+  ,CASE WHEN note = 'None' THEN NULL ELSE note END AS note
+  ,CAST(verified_email AS BOOL) AS verified_email
+  ,multipass_identifier
+  ,CAST(tax_exempt AS BOOL) AS tax_exempt
+  ,tags
+  ,CASE WHEN last_order_name = 'None' THEN NULL ELSE last_order_name END AS last_order_name
+  ,currency
+  ,phone
+  ,STRUCT(addresses) AS addresses
+  ,tax_exemptions
+  ,STRUCT(email_marketing_consent) AS email_marketing_consent
+  ,STRUCT(sms_marketing_consent) AS email_marketing_consent
+  ,admin_graphql_api_id
+  ,CASE WHEN default_address = 'nan' THEN NULL ELSE STRUCT(default_address) END AS default_address
+FROM
+  impression-digital.raw.Customer
+
+)
+
+SELECT *
+FROM raw_cust
+    );
+  
+[0m21:47:56.360834 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=impression-digital&j=bq:EU:60b16673-0550-48a5-ada6-c068e9eb7ae2&page=queryresults
+[0m21:47:56.484830 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=impression-digital&j=bq:EU:60b16673-0550-48a5-ada6-c068e9eb7ae2&page=queryresults
+[0m21:47:57.055418 [debug] [Thread-1 (]: Database Error in model customer (models\staging\customer.sql)
+  CREATE TABLE has columns with duplicate name email_marketing_consent at [15:1]
+  compiled code at target\run\shopify\models\staging\customer.sql
+[0m21:47:57.064467 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bc320819-2a7d-42a5-8734-c3b697476f16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AD8CA056A0>]}
+[0m21:47:57.068468 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model staging.customer ......................... [[31mERROR[0m in 1.59s]
+[0m21:47:57.106542 [debug] [Thread-1 (]: Finished running node model.shopify.customer
+[0m21:47:57.108829 [debug] [Thread-4 (]: Marking all children of 'model.shopify.customer' to be skipped because of status 'error'.  Reason: Database Error in model customer (models\staging\customer.sql)
+  CREATE TABLE has columns with duplicate name email_marketing_consent at [15:1]
+  compiled code at target\run\shopify\models\staging\customer.sql.
+[0m21:47:57.114539 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:47:57.119692 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:47:57.121694 [debug] [MainThread]: Connection 'list_impression-digital' was properly closed.
+[0m21:47:57.122699 [debug] [MainThread]: Connection 'list_impression-digital_staging' was properly closed.
+[0m21:47:57.124691 [debug] [MainThread]: Connection 'model.shopify.customer' was properly closed.
+[0m21:47:57.126693 [info ] [MainThread]: 
+[0m21:47:57.147746 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 2.63 seconds (2.63s).
+[0m21:47:57.152576 [debug] [MainThread]: Command end result
+[0m21:47:57.463413 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\manifest.json
+[0m21:47:57.473700 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\semantic_manifest.json
+[0m21:47:57.496743 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\run_results.json
+[0m21:47:57.498745 [info ] [MainThread]: 
+[0m21:47:57.509595 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m21:47:57.513880 [info ] [MainThread]: 
+[0m21:47:57.525918 [error] [MainThread]:   Database Error in model customer (models\staging\customer.sql)
+  CREATE TABLE has columns with duplicate name email_marketing_consent at [15:1]
+  compiled code at target\run\shopify\models\staging\customer.sql
+[0m21:47:57.535364 [info ] [MainThread]: 
+[0m21:47:57.543100 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m21:47:57.554167 [debug] [MainThread]: Command `dbt run` failed at 21:47:57.554129 after 8.43 seconds
+[0m21:47:57.560342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AD8CB742F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AD81C9C1A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADFF8442F0>]}
+[0m21:47:57.563177 [debug] [MainThread]: Flushing usage events
+[0m21:47:57.953965 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:48:37.182402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002106190E9C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021061056120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002106190EF00>]}
+
+
+============================== 21:48:37.189549 | 03411bd2-ea96-4554-8271-8cc13c7b4b36 ==============================
+[0m21:48:37.189549 [info ] [MainThread]: Running with dbt=1.9.1
+[0m21:48:37.193366 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\amarh\\Dropbox\\My_Stuff\\Progress File (Actual)\\Job Applications\\2024\\Data Engineer\\Impression Digital\\impression-digital-task\\01_code\\transform\\shopify\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\amarh\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:48:40.144915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '03411bd2-ea96-4554-8271-8cc13c7b4b36', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002106190C320>]}
+[0m21:48:40.249904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '03411bd2-ea96-4554-8271-8cc13c7b4b36', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000210610544A0>]}
+[0m21:48:40.255528 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m21:48:41.114850 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m21:48:41.506936 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:48:41.506936 [debug] [MainThread]: Partial parsing: updated file: shopify://models\staging\customer.sql
+[0m21:48:41.922278 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.shopify.raw
+[0m21:48:41.931732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '03411bd2-ea96-4554-8271-8cc13c7b4b36', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002106C2477D0>]}
+[0m21:48:42.091829 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\manifest.json
+[0m21:48:42.106017 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\semantic_manifest.json
+[0m21:48:42.190237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '03411bd2-ea96-4554-8271-8cc13c7b4b36', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002106C224FE0>]}
+[0m21:48:42.192966 [info ] [MainThread]: Found 1 model, 490 macros
+[0m21:48:42.195805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '03411bd2-ea96-4554-8271-8cc13c7b4b36', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000210696EE390>]}
+[0m21:48:42.204672 [info ] [MainThread]: 
+[0m21:48:42.205672 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:48:42.205672 [info ] [MainThread]: 
+[0m21:48:42.214757 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:48:42.222424 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_impression-digital'
+[0m21:48:42.223826 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:48:42.615824 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_impression-digital_staging'
+[0m21:48:42.616925 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:48:42.883331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '03411bd2-ea96-4554-8271-8cc13c7b4b36', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002106BEFF8C0>]}
+[0m21:48:42.884332 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:48:42.895554 [debug] [Thread-1 (]: Began running node model.shopify.customer
+[0m21:48:42.897608 [info ] [Thread-1 (]: 1 of 1 START sql table model staging.customer .................................. [RUN]
+[0m21:48:42.901029 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.shopify.customer'
+[0m21:48:42.903030 [debug] [Thread-1 (]: Began compiling node model.shopify.customer
+[0m21:48:42.925252 [debug] [Thread-1 (]: Writing injected SQL for node "model.shopify.customer"
+[0m21:48:42.934265 [debug] [Thread-1 (]: Began executing node model.shopify.customer
+[0m21:48:42.985437 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:48:43.358700 [debug] [Thread-1 (]: Writing runtime sql for node "model.shopify.customer"
+[0m21:48:43.367217 [debug] [Thread-1 (]: On model.shopify.customer: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "shopify", "target_name": "dev", "node_id": "model.shopify.customer"} */
+
+  
+    
+
+    create or replace table `impression-digital`.`staging`.`customer`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+WITH raw_cust AS (
+
+SELECT
+  id
+  ,email
+  ,PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', created_at) AS created_at
+  ,PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', updated_at) AS updated_at
+  ,first_name
+  ,last_name
+  ,CAST(orders_count AS INT64) AS orders_count
+  ,state
+  ,CAST(total_spent AS FLOAT64) AS total_spent
+  ,CASE WHEN last_order_id = 'nan' THEN NULL ELSE CAST(last_order_id AS STRING) END AS last_order_id
+  ,CASE WHEN note = 'None' THEN NULL ELSE note END AS note
+  ,CAST(verified_email AS BOOL) AS verified_email
+  ,multipass_identifier
+  ,CAST(tax_exempt AS BOOL) AS tax_exempt
+  ,tags
+  ,CASE WHEN last_order_name = 'None' THEN NULL ELSE last_order_name END AS last_order_name
+  ,currency
+  ,phone
+  ,STRUCT(addresses) AS addresses
+  ,tax_exemptions
+  ,STRUCT(email_marketing_consent) AS email_marketing_consent
+  ,STRUCT(sms_marketing_consent) AS sms_marketing_consent
+  ,admin_graphql_api_id
+  ,CASE WHEN default_address = 'nan' THEN NULL ELSE STRUCT(default_address) END AS default_address
+FROM
+  impression-digital.raw.Customer
+
+)
+
+SELECT *
+FROM raw_cust
+    );
+  
+[0m21:48:43.833309 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=impression-digital&j=bq:EU:9c0b228c-8e7d-4ecc-b672-f5d98e4fb133&page=queryresults
+[0m21:48:46.970705 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '03411bd2-ea96-4554-8271-8cc13c7b4b36', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002106BA9CAD0>]}
+[0m21:48:46.971903 [info ] [Thread-1 (]: 1 of 1 OK created sql table model staging.customer ............................. [[32mCREATE TABLE (13.0 rows, 15.2 KiB processed)[0m in 4.06s]
+[0m21:48:46.976175 [debug] [Thread-1 (]: Finished running node model.shopify.customer
+[0m21:48:46.980260 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:48:46.984505 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:48:46.984505 [debug] [MainThread]: Connection 'list_impression-digital' was properly closed.
+[0m21:48:46.984505 [debug] [MainThread]: Connection 'list_impression-digital_staging' was properly closed.
+[0m21:48:46.993052 [debug] [MainThread]: Connection 'model.shopify.customer' was properly closed.
+[0m21:48:46.995045 [info ] [MainThread]: 
+[0m21:48:46.998340 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.78 seconds (4.78s).
+[0m21:48:47.002191 [debug] [MainThread]: Command end result
+[0m21:48:47.204445 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\manifest.json
+[0m21:48:47.207828 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\semantic_manifest.json
+[0m21:48:47.229999 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\run_results.json
+[0m21:48:47.231453 [info ] [MainThread]: 
+[0m21:48:47.233497 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:48:47.234619 [info ] [MainThread]: 
+[0m21:48:47.236620 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m21:48:47.241018 [debug] [MainThread]: Command `dbt run` succeeded at 21:48:47.240015 after 10.31 seconds
+[0m21:48:47.241992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021061056120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002106C0CB2C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002106C0C9CA0>]}
+[0m21:48:47.244904 [debug] [MainThread]: Flushing usage events
+[0m21:48:47.634256 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:41:16.482439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBFC4E02F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBFC4E03E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBFC4E0200>]}
+
+
+============================== 22:41:16.494021 | c5f7ce14-a154-423e-bbb2-7152d44b7b4c ==============================
+[0m22:41:16.494021 [info ] [MainThread]: Running with dbt=1.9.1
+[0m22:41:16.496092 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\amarh\\.dbt', 'log_path': 'C:\\Users\\amarh\\Dropbox\\My_Stuff\\Progress File (Actual)\\Job Applications\\2024\\Data Engineer\\Impression Digital\\impression-digital-task\\01_code\\transform\\shopify\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m22:41:20.312968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c5f7ce14-a154-423e-bbb2-7152d44b7b4c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB8429DBB0>]}
+[0m22:41:20.471741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c5f7ce14-a154-423e-bbb2-7152d44b7b4c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB85261B80>]}
+[0m22:41:20.474304 [info ] [MainThread]: Registered adapter: bigquery=1.9.0
+[0m22:41:21.301207 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m22:41:21.708060 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:41:21.708060 [debug] [MainThread]: Partial parsing: updated file: shopify://models\staging\customer.sql
+[0m22:41:22.153045 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.shopify.raw
+[0m22:41:22.167781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c5f7ce14-a154-423e-bbb2-7152d44b7b4c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB86DF3770>]}
+[0m22:41:22.329695 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\manifest.json
+[0m22:41:22.343269 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\semantic_manifest.json
+[0m22:41:22.429691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c5f7ce14-a154-423e-bbb2-7152d44b7b4c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB86DD5130>]}
+[0m22:41:22.430819 [info ] [MainThread]: Found 1 model, 490 macros
+[0m22:41:22.433108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c5f7ce14-a154-423e-bbb2-7152d44b7b4c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB863D03E0>]}
+[0m22:41:22.435217 [info ] [MainThread]: 
+[0m22:41:22.443864 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:41:22.445863 [info ] [MainThread]: 
+[0m22:41:22.457045 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:41:22.460345 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_impression-digital'
+[0m22:41:22.460345 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:41:22.997618 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_impression-digital_staging'
+[0m22:41:23.001231 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:41:23.394025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c5f7ce14-a154-423e-bbb2-7152d44b7b4c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB851F1FD0>]}
+[0m22:41:23.395018 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:41:23.412887 [debug] [Thread-1 (]: Began running node model.shopify.customer
+[0m22:41:23.413894 [info ] [Thread-1 (]: 1 of 1 START sql table model staging.customer .................................. [RUN]
+[0m22:41:23.421888 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.shopify.customer'
+[0m22:41:23.423898 [debug] [Thread-1 (]: Began compiling node model.shopify.customer
+[0m22:41:23.457765 [debug] [Thread-1 (]: Writing injected SQL for node "model.shopify.customer"
+[0m22:41:23.464735 [debug] [Thread-1 (]: Began executing node model.shopify.customer
+[0m22:41:23.506391 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:41:23.949645 [debug] [Thread-1 (]: Writing runtime sql for node "model.shopify.customer"
+[0m22:41:23.953746 [debug] [Thread-1 (]: On model.shopify.customer: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "shopify", "target_name": "dev", "node_id": "model.shopify.customer"} */
+
+  
+    
+
+    create or replace table `impression-digital`.`staging`.`customer`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+WITH raw_cust AS (
+
+SELECT
+  id
+  ,email
+  ,PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', created_at) AS created_at
+  ,PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', updated_at) AS updated_at
+  ,first_name
+  ,last_name
+  ,CAST(orders_count AS INT64) AS orders_count
+  ,state
+  ,CAST(total_spent AS FLOAT64) AS total_spent
+  ,CAST(last_order_id AS STRING) AS last_order_id
+  ,note
+  ,CAST(verified_email AS BOOL) AS verified_email
+  ,multipass_identifier
+  ,CAST(tax_exempt AS BOOL) AS tax_exempt
+  ,tags
+  ,last_order_name
+  ,currency
+  ,phone
+  ,addresses
+  ,tax_exemptions
+  ,email_marketing_consent
+  ,sms_marketing_consent
+  ,admin_graphql_api_id
+  ,default_address
+FROM
+  impression-digital.raw.Customer
+)
+
+SELECT *
+FROM raw_cust
+    );
+  
+[0m22:41:24.738490 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=impression-digital&j=bq:EU:50146381-d3b6-4c3b-95e9-7b105c12abdb&page=queryresults
+[0m22:41:27.531061 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c5f7ce14-a154-423e-bbb2-7152d44b7b4c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB8664C740>]}
+[0m22:41:27.532060 [info ] [Thread-1 (]: 1 of 1 OK created sql table model staging.customer ............................. [[32mCREATE TABLE (13.0 rows, 6.9 KiB processed)[0m in 4.10s]
+[0m22:41:27.534784 [debug] [Thread-1 (]: Finished running node model.shopify.customer
+[0m22:41:27.538191 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:41:27.544030 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:41:27.545030 [debug] [MainThread]: Connection 'list_impression-digital' was properly closed.
+[0m22:41:27.545030 [debug] [MainThread]: Connection 'list_impression-digital_staging' was properly closed.
+[0m22:41:27.550890 [debug] [MainThread]: Connection 'model.shopify.customer' was properly closed.
+[0m22:41:27.551892 [info ] [MainThread]: 
+[0m22:41:27.558028 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 5.10 seconds (5.10s).
+[0m22:41:27.561040 [debug] [MainThread]: Command end result
+[0m22:41:27.755067 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\manifest.json
+[0m22:41:27.763261 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\semantic_manifest.json
+[0m22:41:27.782791 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data Engineer\Impression Digital\impression-digital-task\01_code\transform\shopify\target\run_results.json
+[0m22:41:27.784079 [info ] [MainThread]: 
+[0m22:41:27.786266 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:41:27.789272 [info ] [MainThread]: 
+[0m22:41:27.791496 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m22:41:27.796526 [debug] [MainThread]: Command `dbt run` succeeded at 22:41:27.796526 after 11.64 seconds
+[0m22:41:27.804077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBFC4BFBC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBFC4BF9E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBFC4BFD70>]}
+[0m22:41:27.806078 [debug] [MainThread]: Flushing usage events
+[0m22:41:28.291569 [debug] [MainThread]: An error was encountered while trying to flush usage events
