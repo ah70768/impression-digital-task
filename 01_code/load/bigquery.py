@@ -27,10 +27,10 @@ class BigQueryManager:
 
         try:
             self.client.create_dataset(dataset, timeout=30)
-            print('Dataset {ds} created in project {pid}'.format(ds=dataset_id, pid=self.project_id))
+            print('Dataset: {ds} created in Project: {pid}'.format(ds=dataset_id, pid=self.project_id))
         except Exception as e:
             if 'Already Exists' in str(e):
-                print('Dataset {ds} already exists in project {pid}'.format(ds=dataset_id, pid=self.project_id))
+                print('Dataset: {ds} already exists in Project: {pid}'.format(ds=dataset_id, pid=self.project_id))
             else:
                 print('An error occured {error}'.format(error=e))
     
@@ -42,7 +42,7 @@ class BigQueryManager:
         job_config = bigquery.LoadJobConfig(write_disposition="WRITE_TRUNCATE", source_format=bigquery.SourceFormat.PARQUET)
         job = self.client.load_table_from_dataframe(dataframe.astype(str), table_ref, job_config=job_config)
         job.result()
-        print('Data loaded into table {t_id} in dataset {d_id}'.format(t_id=table_id,d_id=dataset_id))
+        print('Data loaded into Table: {t_id} in Dataset: {d_id}'.format(t_id=table_id,d_id=dataset_id))
 
 
 if __name__ == '__main__':
