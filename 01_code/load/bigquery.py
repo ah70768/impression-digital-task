@@ -73,7 +73,7 @@ if __name__ == '__main__':
     #     bq.create_dataset(ds)
 
     # for key in tables_df.keys():
-    #     bq.load_table(tables_df[key], 'raw', key)
+    #     bq.load_table(tables_df[key], 'raw', key.lower())
     
     pass
     

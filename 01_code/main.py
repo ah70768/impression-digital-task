@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
-from .extract.fetch_shopify_data import ShopifyAPI
-from .load.bigquery import BigQueryManager
+from extract.fetch_shopify_data import ShopifyAPI
+from load.bigquery import BigQueryManager
 
 
 def main():
@@ -31,7 +31,7 @@ def main():
         bq.create_dataset(ds)
 
     for key in tables_df.keys():
-        bq.load_table(tables_df[key], 'raw', key)
+        bq.load_table(tables_df[key], 'raw', key.lower())
     
 
 
