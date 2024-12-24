@@ -10,13 +10,18 @@ from google.oauth2 import service_account
 
 class BigQueryManager:
 
-    def __init__(self, project_id, credentials_path):
+    def __init__(self, project_id, credentials_path=None):
         
         self.project_id = project_id
         self.credentials_path = credentials_path
-
-        self.credentials = service_account.Credentials.from_service_account_file(credentials_path)
+        
+        if credentials_path is not None:
+            self.credentials = service_account.Credentials.from_service_account_file(credentials_path)
+        else:
+            self.credentials = None
+        
         self.client = bigquery.Client(project=self.project_id, credentials = self.credentials)
+        
 
     
     def create_dataset(self, dataset_id, location = 'EU'):

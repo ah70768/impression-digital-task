@@ -4,10 +4,10 @@ from extract.fetch_shopify_data import ShopifyAPI
 from load.bigquery import BigQueryManager
 
 
-def main():
+def main(request):
     
-    dotenv_path = os.path.join(os.path.dirname(__file__), "config", ".env")
-    load_dotenv(dotenv_path)
+    # dotenv_path = os.path.join(os.path.dirname(__file__), "config", ".env")
+    # load_dotenv(dotenv_path)
 
     shop = os.getenv('SHOP_URL')
     api_key = os.getenv('SHOPIFY_ADMIN_API_ACCESS_TOKEN')
@@ -33,7 +33,9 @@ def main():
     for key in tables_df.keys():
         bq.load_table(tables_df[key], 'raw', key.lower())
     
+    return "Shopify ETL Process Completed", 200
+    
 
 
 if __name__ == '__main__':
-    main()
+    main(None)
