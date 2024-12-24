@@ -81,7 +81,7 @@ GROUP BY line_product_id
 SELECT 
   agg.product_id
   ,p.title AS item_title
-  ,agg.product_quantity
+  ,agg.product_quantity_sold
   ,agg.product_rev
 FROM agg
 LEFT JOIN 
