@@ -40,7 +40,7 @@ class BigQueryManager:
         table_ref = self.client.dataset(dataset_id).table(table_id)
 
         job_config = bigquery.LoadJobConfig(write_disposition="WRITE_TRUNCATE", source_format=bigquery.SourceFormat.PARQUET)
-        job = self.client.load_table_from_dataframe(dataframe.astype(str), table_ref, job_config=job_config)
+        job = self.client.load_table_from_dataframe(dataframe, table_ref, job_config=job_config)
         job.result()
         print('Data loaded into Table: {t_id} in Dataset: {d_id}'.format(t_id=table_id,d_id=dataset_id))
 
@@ -57,7 +57,8 @@ if __name__ == '__main__':
     # client = ShopifyAPI(shop, api_key, api_version)
     # client.create_session()
         
-    # table_names = ['Order', 'Product', 'Customer']
+    # # table_names = ['Order', 'Product', 'Customer']
+    # table_names =  ['Variants']
     # tables_df = client.fetch_tables(table_names)
 
     # project_id = os.getenv('GCP_PROJECT_ID')
@@ -72,7 +73,7 @@ if __name__ == '__main__':
     #     bq.create_dataset(ds)
 
     # for key in tables_df.keys():
-    #     bq.load_table(tables_df[key], 'raw', key)
+    #     bq.load_table(tables_df[key], 'raw', key.lower())
     
     pass
     
