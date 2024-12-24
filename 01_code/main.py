@@ -1,41 +1,80 @@
 import os
-from dotenv import load_dotenv
+import yaml
 from extract.fetch_shopify_data import ShopifyAPI
 from load.bigquery import BigQueryManager
 
 
+class Pipeline:
+
+    def __init__(self, config_path, local_deployment=True):
+
+        self.load_environment(config_path)
+
+        if local_deployment:
+            self.bigquery = BigQueryManager(project_id=os.getenv('GCP_PROJECT_ID'), 
+                                            credentials_path=os.path.join(config_path, os.getenv('GCP_CREDENTIALS'))
+            )
+        else:
+            self.bigquery = BigQueryManager(project_id=os.getenv('GCP_PROJECT_ID'))
+
+        self.shopify_client = ShopifyAPI(shop=os.getenv('SHOP_URL'), 
+                                         api_key=os.getenv('SHOPIFY_ADMIN_API_ACCESS_TOKEN'), 
+                                         api_version=os.getenv('SHOPIFY_API_VERSION')
+        )
+        
+        self.datasets = ['raw', 'staging', 'processed']
+        self.table_names = ['Order', 'Product', 'Customer', 'Variant']
+
+    
+    def load_environment(self, config_path):
+
+        yaml_path = os.path.join(config_path, 'env.yaml')      
+
+        with open(yaml_path, 'r') as file:
+            config = yaml.safe_load(file) 
+        
+        for key, value in config.items():
+            os.environ[key] = value 
+        return
+
+    
+    def fetch_data(self):
+        
+        self.shopify_client.create_session()
+        tables_df = self.shopify_client.fetch_tables(self.table_names)
+        return tables_df
+    
+    
+    def load_data_to_bigquery(self, tables_df):
+
+        for dataset in self.datasets:
+            self.bigquery.create_dataset(dataset)
+
+        for key in tables_df.keys():
+            self.bigquery.load_table(tables_df[key], 'raw', key.lower())
+        return
+    
+    def run(self):
+
+        tables_df = self.fetch_data()
+        self.load_data_to_bigquery(tables_df)
+
+        return 'Shopify ETL Process Completed', 200
+
+
+# Google Cloud Function Entry Point
 def main(request):
     
-    # dotenv_path = os.path.join(os.path.dirname(__file__), "config", ".env")
-    # load_dotenv(dotenv_path)
-
-    shop = os.getenv('SHOP_URL')
-    api_key = os.getenv('SHOPIFY_ADMIN_API_ACCESS_TOKEN')
-    api_version = os.getenv('SHOPIFY_API_VERSION')
+    config_path = os.path.join(os.path.dirname(__file__), 'config')
+    pipeline = Pipeline(config_path, local_deployment=False)    
     
-    client = ShopifyAPI(shop, api_key, api_version)
-    client.create_session()
-        
-    table_names = ['Order', 'Product', 'Customer', 'Variant']
-    tables_df = client.fetch_tables(table_names)
+    return pipeline.run()
 
-    project_id = os.getenv('GCP_PROJECT_ID')
-    gcp_creds_path = os.path.join(os.path.dirname(__file__), 'config', 'impression-digital-22a0eecacc9a.json')
-
-    # print(project_id)
-    bq = BigQueryManager(project_id, gcp_creds_path)
-
-    # create datasets for each stage of data processing
-    datasets = ['raw', 'staging', 'processed']
-    for ds in datasets:
-        bq.create_dataset(ds)
-
-    for key in tables_df.keys():
-        bq.load_table(tables_df[key], 'raw', key.lower())
-    
-    return "Shopify ETL Process Completed", 200
-    
 
 
 if __name__ == '__main__':
-    main(None)
+    
+    config_path = os.path.join(os.path.dirname(__file__), 'config')
+    pipeline = Pipeline(config_path)
+    pipeline.run()
+    
