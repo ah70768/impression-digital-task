@@ -1,3 +1,12 @@
 repo_pat.txt
 impression-digital-22a0eecacc9a.json
 venv
+
+01_code/__pycache__/
+01_code/extract/__pycache__/
+01_code/load/__pycache__/
+01_code/transform/__pycache__/
+
+01_code/transform/shopify/target/
+01_code/transform/shopify/dbt_packages/
+01_code/transform/shopify/logs/

@@ -16,7 +16,7 @@ def main():
     client = ShopifyAPI(shop, api_key, api_version)
     client.create_session()
         
-    table_names = ['Order', 'Product', 'Customer']
+    table_names = ['Order', 'Product', 'Customer', 'Variant']
     tables_df = client.fetch_tables(table_names)
 
     project_id = os.getenv('GCP_PROJECT_ID')

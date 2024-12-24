@@ -9,11 +9,12 @@
 WITH correct_prices AS 
 (
     SELECT
-        od.order_number
-        ,line.product_id
-        ,CAST(variant.price AS NUMERIC) AS price
-        ,CAST(line.quantity AS NUMERIC) AS quantity
-        ,CAST(variant.price AS NUMERIC)*CAST(line.quantity AS NUMERIC) AS subtotal
+      od.order_number
+      ,line.product_id
+      -- order 1010 was paid in MXN but the GBP equivalent price is not in the product or variant table
+      ,CASE WHEN od.order_number = 1010 THEN CAST(line.price AS NUMERIC) ELSE CAST(variant.price AS NUMERIC) END AS price
+      ,CAST(line.quantity AS NUMERIC) AS quantity
+      ,(CASE WHEN od.order_number = 1010 THEN CAST(line.price AS NUMERIC) ELSE CAST(variant.price AS NUMERIC) END) * CAST(line.quantity AS NUMERIC) AS subtotal
     FROM raw.order AS od
     LEFT JOIN UNNEST(od.line_items) AS line
     LEFT JOIN {{ ref('product') }} AS pd
@@ -53,8 +54,8 @@ SELECT
   ,COALESCE(s.subtotal, CAST(o.current_subtotal_price AS NUMERIC)) - CAST(o.total_discounts AS NUMERIC) AS current_subtotal_price
   ,IFNULL(sp.price,0) AS shipping_cost
   ,COALESCE(s.subtotal, CAST(o.current_subtotal_price AS NUMERIC)) - CAST(o.total_discounts AS NUMERIC) + IFNULL(sp.price,0) AS total_price 
-  -- ,CAST(o.current_subtotal_price AS NUMERIC) AS shopify_total
-  -- ,o.total_price
+  -- ,CAST(o.current_subtotal_price AS NUMERIC) AS shopify_subtotal 
+  -- ,o.total_price AS shopify_subtotal
   ,CAST(total_tax AS NUMERIC) AS total_tax
   ,financial_status
   ,fulfillment_status

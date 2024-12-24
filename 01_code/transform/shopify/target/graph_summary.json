@@ -1,1 +1,0 @@
-{"_invocation_id": "e61e7e02-816f-429f-9f44-2dada926af44", "linked": {"0": {"name": "model.shopify.product", "type": "model", "succ": [1, 3]}, "1": {"name": "model.shopify.order", "type": "model", "succ": [2, 3]}, "2": {"name": "model.shopify.customer", "type": "model"}, "3": {"name": "model.shopify.product_sales_agg", "type": "model"}}}
