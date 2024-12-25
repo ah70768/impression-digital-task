@@ -2,6 +2,9 @@ repo_pat.txt
 impression-digital-22a0eecacc9a.json
 venv
 
+01_code/config/.env
+01_code/config/.user.yml
+
 01_code/__pycache__/
 01_code/extract/__pycache__/
 01_code/load/__pycache__/
