@@ -5,7 +5,8 @@
 Clone this Git repository with the following command:
 
 ```bash
-git clone https://gitlab.com/ah70768/impression-digital-task
+git clone https://gitlab.com/ah70768/impression-digital-task.git
+cd impression-digital-task
 ```
 
 ## Installation
