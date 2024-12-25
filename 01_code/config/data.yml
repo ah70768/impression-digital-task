@@ -1,0 +1,12 @@
+bigquery:
+  datasets:
+    - raw
+    - staging
+    - processed
+
+shopify:
+  tables:
+    - Order
+    - Product
+    - Customer
+    - Variant
