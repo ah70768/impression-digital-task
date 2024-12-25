@@ -1,0 +1,12 @@
+config/.env
+config/.user.yml
+config/impression-digital-22a0eecacc9a.json
+
+__pycache__/
+extract/__pycache__/
+load/__pycache__/
+transform/__pycache__/
+
+transform/shopify/target/
+transform/shopify/dbt_packages/
+transform/shopify/logs/
