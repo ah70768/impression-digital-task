@@ -1,4 +1,5 @@
 import os
+import subprocess
 import yaml
 from extract.fetch_shopify_data import ShopifyAPI
 from load.bigquery import BigQueryManager
@@ -8,7 +9,9 @@ class Pipeline:
 
     def __init__(self, config_path, local_deployment=True):
 
-        self.load_environment(config_path)
+        self.config_path = config_path
+
+        self.load_environment()
 
         if local_deployment:
             self.bigquery = BigQueryManager(project_id=os.getenv('GCP_PROJECT_ID'), 
@@ -26,9 +29,9 @@ class Pipeline:
         self.table_names = ['Order', 'Product', 'Customer', 'Variant']
 
     
-    def load_environment(self, config_path):
+    def load_environment(self):
 
-        yaml_path = os.path.join(config_path, 'env.yaml')      
+        yaml_path = os.path.join(self.config_path, 'env.yaml')      
 
         with open(yaml_path, 'r') as file:
             config = yaml.safe_load(file) 
@@ -53,11 +56,28 @@ class Pipeline:
         for key in tables_df.keys():
             self.bigquery.load_table(tables_df[key], 'raw', key.lower())
         return
+
+    def dbt(self):
+
+        result = subprocess.run(
+            ['dbt', 'run'],
+            cwd=os.path.join(os.path.dirname(__file__), 'transform', 'shopify'),  
+            capture_output=True,
+            text=True,
+            env={**os.environ, 'DBT_PROFILES_DIR': self.config_path}  
+        )
+        
+        if result.returncode == 0:
+            print("DBT model build successful")
+        else:
+            print(f"DBT model build failed: {result.stdout}")
     
+
     def run(self):
 
         tables_df = self.fetch_data()
         self.load_data_to_bigquery(tables_df)
+        self.dbt()
 
         return 'Shopify ETL Process Completed', 200
 
@@ -77,4 +97,4 @@ if __name__ == '__main__':
     config_path = os.path.join(os.path.dirname(__file__), 'config')
     pipeline = Pipeline(config_path)
     pipeline.run()
-    
+     

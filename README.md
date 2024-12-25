@@ -65,6 +65,9 @@ gcloud functions deploy shopify_etl \
 
   gcloud functions deploy shopify_etl --runtime python312 --trigger-http --entry-point main --region europe-west2 --env-vars-file config/env.yaml --allow-unauthenticated --memory 512MB
 
+  'C:\Users\amarh\Dropbox\My_Stuff\Progress File (Actual)\Job Applications\2024\Data
+        Engineer\Impression Digital\impression-digital-task\01_code\config\impression-digital-22a0eecacc9a.json'
+
 
 ## Support
 Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
