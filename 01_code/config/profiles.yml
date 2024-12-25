@@ -6,7 +6,6 @@ shopify:
       job_retries: 1
       location: EU
       method: oauth
-      impersonate-service-account: 1096673245843-compute@developer.gserviceaccount.com
       priority: interactive
       project: impression-digital
       threads: 1

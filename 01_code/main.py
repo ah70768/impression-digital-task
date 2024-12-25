@@ -5,10 +5,16 @@ from extract.fetch_shopify_data import ShopifyAPI
 from load.bigquery import BigQueryManager
 
 
-class Pipeline:
+class ETLPipeline:
 
     def __init__(self, config_path, local_deployment=True):
+        """
+        Initializes the ETL pipeline.
 
+        Args:
+            config_path (str): Path to the configuration directory.
+            local_deployment (bool): Flag to indicate local or cloud deployment. Defaults to True.
+        """
         self.config_path = config_path
 
         self.load_environment()
@@ -30,8 +36,13 @@ class Pipeline:
 
     
     def load_environment(self):
+        """
+        Loads environment variables from a YAML configuration file.
+        
+        Reads the 'env.yml' file from the config path and sets the variables in the environment.
+        """
 
-        yaml_path = os.path.join(self.config_path, 'env.yaml')      
+        yaml_path = os.path.join(self.config_path, 'env.yml')      
 
         with open(yaml_path, 'r') as file:
             config = yaml.safe_load(file) 
@@ -42,13 +53,28 @@ class Pipeline:
 
     
     def fetch_data(self):
-        
+        """
+        Extracts data from the Shopify API.
+
+        Establishes a session with Shopify and fetches data for the specified table names.
+
+        Returns:
+            dict: A dictionary of pandas DataFrames containing the data from the Shopify tables.
+        """
         self.shopify_client.create_session()
         tables_df = self.shopify_client.fetch_tables(self.table_names)
         return tables_df
     
     
     def load_data_to_bigquery(self, tables_df):
+        """
+        Loads data into Google BigQuery.
+
+        Creates datasets and loads data into BigQuery tables.
+
+        Args:
+            tables_df (dict): A dictionary of pandas DataFrames to be loaded into BigQuery.
+        """
 
         for dataset in self.datasets:
             self.bigquery.create_dataset(dataset)
@@ -57,7 +83,12 @@ class Pipeline:
             self.bigquery.load_table(tables_df[key], 'raw', key.lower())
         return
 
-    def dbt(self):
+    def run_dbt(self):
+        """
+        Runs DBT models to transform data.
+
+        Uses the DBT CLI to build models in the 'transform/shopify' directory.
+        """
 
         result = subprocess.run(
             ['dbt', 'run'],
@@ -74,19 +105,45 @@ class Pipeline:
     
 
     def run(self):
+        """
+        Executes the full ETL pipeline.
 
+        Performs the following steps:
+        1. Extracts data from Shopify.
+        2. Loads data into BigQuery.
+        3. Runs DBT transformations.
+
+        Returns:
+            tuple: A message indicating the pipeline status and an HTTP status code.
+        """
         tables_df = self.fetch_data()
         self.load_data_to_bigquery(tables_df)
-        self.dbt()
+        self.run_dbt()
 
-        return 'Shopify ETL Process Completed', 200
+        return 'ETL Process Completed', 200
 
 
-# Google Cloud Function Entry Point
+
 def main(request):
+    """
+    Google Cloud Function Entry Point.
+
+    Initializes and runs the ETL pipeline in a cloud environment. This function is triggered
+    when an HTTP request is made to the deployed Google Cloud Function. It performs the
+    following steps:
+    1. Loads the configuration files from the specified path.
+    2. Initializes the ETLPipeline class with the configuration.
+    3. Executes the ETL process, including data extraction, loading, and transformation.
+
+    Args:
+        request: The HTTP request object triggering the function.
+
+    Returns:
+        tuple: A message indicating the pipeline status and an HTTP status code (e.g., 'ETL Process Completed', 200).
+    """
     
     config_path = os.path.join(os.path.dirname(__file__), 'config')
-    pipeline = Pipeline(config_path, local_deployment=False)    
+    pipeline = ETLPipeline(config_path, local_deployment=False)    
     
     return pipeline.run()
 
@@ -94,7 +151,9 @@ def main(request):
 
 if __name__ == '__main__':
     
-    config_path = os.path.join(os.path.dirname(__file__), 'config')
-    pipeline = Pipeline(config_path)
-    pipeline.run()
+    # config_path = os.path.join(os.path.dirname(__file__), 'config')
+    # pipeline = Pipeline(config_path)
+    # pipeline.run()
+
+    pass
      
