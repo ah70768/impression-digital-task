@@ -31,8 +31,10 @@ class ETLPipeline:
                                          api_version=os.getenv('SHOPIFY_API_VERSION')
         )
         
-        self.datasets = ['raw', 'staging', 'processed']
-        self.table_names = ['Order', 'Product', 'Customer', 'Variant']
+        self.data_config = self.load_data_config()
+
+        self.datasets = self.data_config['bigquery']['datasets']
+        self.table_names = self.data_config['shopify']['tables']
 
     
     def load_environment(self):
@@ -51,6 +53,22 @@ class ETLPipeline:
             os.environ[key] = value 
         return
 
+    def load_data_config(self):
+        """
+        Loads the data configuration from a YAML file.
+
+        This method reads a `data.yml` file located in the `config_path` directory
+        and parses its contents using YAML to return the configuration as a dictionary.
+
+        Returns:
+            dict: A dictionary containing the data configuration defined in `data.yml`.
+        """
+
+        data_config_path = os.path.join(self.config_path, 'data.yml')
+
+        with open(data_config_path, 'r') as file:
+            config = yaml.safe_load(file)
+        return config
     
     def fetch_data(self):
         """
