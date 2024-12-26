@@ -109,7 +109,7 @@ class ETLPipeline:
         """
 
         result = subprocess.run(
-            ['dbt', 'run'],
+            ['dbt', 'build'],
             cwd=os.path.join(os.path.dirname(__file__), 'transform', 'shopify'),  
             capture_output=True,
             text=True,
