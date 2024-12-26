@@ -169,7 +169,7 @@ Alternatively, you can view logs in the Google Cloud Console. Select the appropr
 
 ## Schedule
 
-Once deployed the cloud function can be scheduled using google cloud scheduler. 
+Once deployed, the cloud function can be scheduled using google cloud scheduler. 
 
 The following provides a comprehensive follow through on how to do this: 
  [Cloud Scheduler - Time Triggers for Cloud Functions](https://www.youtube.com/watch?v=WUPEUjvSBW8).
