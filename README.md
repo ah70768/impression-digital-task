@@ -1,5 +1,11 @@
 # impression-digital-task
 
+## Description
+
+This code repo is represents an ETL pipeline designed to pull data from a Shopify Store using the ShopifyAPI, load the raw data into BigQuery and create subsequent models (using dbt-core) for analytics.
+
+The main code base located in the 01_code folder. The 02_data folder contains .csv tables for reference.
+
 ## Clone Repo
 
 Clone this Git repository with the following command:
@@ -99,6 +105,24 @@ SHOPIFY_API_VERSION: '2024-07'
 GCP_PROJECT_ID: <YOUR_PROJECT_NAME>
 ```
 
+The following .yml file defines which datasets (BigQuery label for schema) to create and which tables to fetch using the ShopifyAPI.
+
+#### 01_code/config/data.yml
+```yaml
+bigquery:
+  datasets:
+    - raw
+    - staging
+    - processed
+
+shopify:
+  tables:
+    - Order
+    - Product
+    - Customer
+    - Variant
+```
+
  
 ## Usage
 
@@ -122,7 +146,7 @@ gcloud functions deploy <CLOUD_FUNCTION_NAME> \
   --runtime python312 \
   --trigger-http \
   --entry-point main \
-  --region europe-west2
+  --region <YOUR_FUNCTION_REGION>
   --env-vars-file config/env.yml \
   --allow-unauthenticated \
   --memory 512MB \
@@ -153,6 +177,11 @@ gcloud functions describe <CLOUD_FUNCTION_NAME> --region <YOUR_FUNCTION_REGION>
 For Example:
 
 ```bash
+gcloud functions describe shopify-etl --region europe-west2
+```
+and:
+
+```bash
 curl https://europe-west2-impression-digital.cloudfunctions.net/shopify-etl
 ```
 
@@ -169,7 +198,7 @@ Alternatively, you can view logs in the Google Cloud Console. Select the appropr
 
 ## Schedule
 
-Once deployed, the cloud function can be scheduled using google cloud scheduler. 
+Once deployed, the cloud function can be scheduled using Google Cloud Scheduler. 
 
 The following provides a comprehensive follow through on how to do this: 
  [Cloud Scheduler - Time Triggers for Cloud Functions](https://www.youtube.com/watch?v=WUPEUjvSBW8).
