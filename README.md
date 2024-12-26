@@ -2,7 +2,7 @@
 
 ## Description
 
-This code repo is represents an ETL pipeline designed to pull data from a Shopify Store using the ShopifyAPI, load the raw data into BigQuery and create subsequent models (using dbt-core) for analytics.
+This code repo forms an ETL pipeline designed to pull data from a Shopify Store using the ShopifyAPI, load the raw data into BigQuery and create subsequent models (using dbt-core) for analytics.
 
 The main code base located in the 01_code folder. The 02_data folder contains .csv tables for reference.
 
